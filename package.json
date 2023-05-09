@@ -12,6 +12,7 @@
     "stylus": "^0.59.0",
     "stylus-loader": "^3.0.2",
     "toastify-js": "^1.12.0",
+    "uuid": "^9.0.0",
     "vue": "^3.2.47",
     "vue-router": "^4.0.13",
     "vue-toast-notification": "3.0",

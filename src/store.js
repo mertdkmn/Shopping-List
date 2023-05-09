@@ -4,7 +4,6 @@ const store = createStore({
     state(){
         return{
             productList: [],
-            productCount: 0
         }
     },
     getters:{
@@ -17,9 +16,6 @@ const store = createStore({
         setProductList(state,payload){
             state.productList = payload;
         },
-        setCurrentCount(state,payload){
-            state.productCount = payload;
-        },
         increaseCount(state){
             state.productCount++;
         },
@@ -31,19 +27,13 @@ const store = createStore({
     actions:{
         addProductToList({commit,state}, payload){
             commit('pushProductList', payload);
-            commit('increaseCount');
             const jsonList = JSON.stringify(state.productList);
-            localStorage.setItem("productCount", state.productCount);
             localStorage.setItem("productList", jsonList);
         },
         getAllProduct({commit,state}){
             const productList = localStorage.getItem("productList");
-            const productCount = localStorage.getItem("productCount");
             if(productList){
                 commit('setProductList', JSON.parse(productList));
-            }
-            if(productCount){
-                commit('setCurrentCount', productCount);
             }
         },
         isStatusChange({commit,state},payload){

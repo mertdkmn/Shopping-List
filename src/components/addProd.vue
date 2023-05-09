@@ -35,6 +35,7 @@
 </div>
 </template>
 <script>
+import { v4 as uuidv4 } from 'uuid';
 export default {
   data() {
     return {
@@ -56,7 +57,7 @@ export default {
       // this.formSubmitted = true
       if(this.name && this.number && this.price && this.description){
       const payload = {
-         id: this.$store.state.productCount,
+         id: uuidv4(),
          name: this.name,
          number: this.number,
          price: this.price,

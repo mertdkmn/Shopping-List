@@ -1,7 +1,7 @@
 <template>
     <div >
        <ul> 
-        <li v-for="item in getProductList" :class="{' sold ': item.isStatus === 'sold'}">
+        <li v-for="item in getProductList" >
             <div>
                 İsim = 
                 {{ item.name }} 
@@ -19,7 +19,7 @@
                 {{ item.description }}
             </div>
             <div class="silSat">
-                <button class="sell" @click="isStatusChange(item.id)">{{ item.isStatus === 'sold' ? 'Satıldı' : 'Sat'}}</button>
+                <button class="sell" :class="{' sold ': item.isStatus === 'sold'}" @click="isStatusChange(item.id)">{{ item.isStatus === 'sold' ? 'Alındı' : 'Al'}}</button>
                 <button class="delete" @click="deleteFromList(item.id)">Sil</button>
             </div>
             <hr>
@@ -80,5 +80,8 @@ export default {
 }
 .sold{
     opacity: .5;
+}
+button:hover{
+  opacity: 0.65;
 }
 </style>

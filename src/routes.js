@@ -1,4 +1,3 @@
-
 import mainPage from './components/mainpage.vue'
 import addProd from './components/addProd.vue'
 import prodList from './components/prodList.vue'
@@ -15,3 +14,4 @@ const routes = [
   })
 
   export default router
+

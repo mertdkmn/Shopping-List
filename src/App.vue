@@ -8,10 +8,10 @@
 </script>
 
 <template>
-  <p>
-    <router-link to="/" class="mainP"> <button>Ana Sayfa</button> </router-link>
-    <router-link to="/addProd" class="addP"><button>Ürün Ekle</button></router-link>
-    <router-link to="/prodList" class="prodL"><button>Ürün Listesi</button></router-link>
+  <p style="text-align: end;">
+    <router-link to="/" class="mainP"> <v-btn>Ana Sayfa</v-btn> </router-link>
+    <router-link to="/addProd" class="addP"><v-btn>Ürün Ekle</v-btn></router-link>
+    <router-link to="/prodList" class="prodL"><v-btn>Ürün Listesi</v-btn></router-link>
   </p>
 <hr>
   <router-view></router-view>
@@ -20,9 +20,15 @@
 <style>
 .mainP{
   margin-right: 13px;
+  text-align: end;
 }
 .addP{
   margin-right: 13px;
+  text-align: end;
+}
+.prodL{
+  margin-right: 13px;
+  text-align: end;
 }
 
 </style>

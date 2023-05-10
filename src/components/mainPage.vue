@@ -21,7 +21,7 @@
 .button{
   background-color: #000000; 
   border: none;
-  color: rgb(17, 160, 72);
+  color: rgb(249, 255, 196);
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -30,6 +30,6 @@
   border-radius: 7%;
 }
 body{
-    background-color: rgb(38, 161, 85);
+    background-color: rgb(249, 255, 196);
 }
 </style>

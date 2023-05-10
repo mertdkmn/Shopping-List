@@ -1,35 +1,40 @@
 <template>
   <div>
-  <form @submit.prevent="submitForm" v-if="!formSubmitted">
-    <span>İsim</span><br>
+  <form @submit.prevent="submitForm" v-if="!formSubmitted" class="formStyle">
+    <label class="form-label">İsim</label>
     <input 
+     class="form-control"
       v-model.trim="name"
       type="text"
       placeholder="Ürün ismi yazınız" 
-    /><br>
-    <hr>
-    <span>Adet</span><br>
+    />
+    <br>
+    <label class="form-label">Adet</label>
     <input 
+    class="form-control"
       v-model.number="number"
       type="number"
       placeholder="Adet Giriniz" 
-    /><br>
-    <hr>
-    <span>Fiyat</span><br>
+    />
+    <br>
+    <label class="form-label">Fiyat</label>
     <input 
+    class="form-control"
       type="number" 
       v-model.number="price" 
       placeholder="Fiyat Giriniz"
     />
-    <hr>
-    <span>Açıklama</span><br>
+    <br>
+    <label class="form-label">Açıklama</label>
     <input 
+    class="form-control"
       type="text"
       v-model.trim="description"
       placeholder="Açıklama..."  
     />
-    <button>
-      <span>Kaydet</span>
+    <br>
+    <button class="btn btn-primary" style="background-color: black; color: beige; border: black;">
+      <label>Kaydet</label>
   </button>
   </form>
 </div>
@@ -83,6 +88,24 @@ export default {
 <style>
 .name{
   margin: auto;
+}
+.formStyle{
+  margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+label{
+  font-size: large;
+  font-family: serif;
+  font-weight: 500;
+}
+input{
+  margin-top: 5px;
+}
+br{
+  margin-top: 5px;
 }
 </style>
 
